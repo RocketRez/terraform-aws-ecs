@@ -144,3 +144,9 @@ variable "secrets" {
   description = "container secrets"
 
 }
+
+variable "use_default_cluster" {
+  type        = bool
+  description = "use distinct buckets for codebuild and codepipeline"
+  default     = false
+}
