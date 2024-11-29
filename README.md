@@ -110,4 +110,11 @@ variable "network_configuration" {
   })
   description = "network configuration for the ecs service"
 }
+
+variable "use_default_cluster" {
+  type        = bool
+  description = "use distinct buckets for codebuild and codepipeline"
+  default     = false
+}
+
 ```
