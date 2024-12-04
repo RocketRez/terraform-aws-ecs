@@ -26,7 +26,7 @@ locals {
 }
 resource "aws_ecs_service" "ecs" {
   name            = var.service_name
-  cluster         = local.aws_ecs_cluster.cluster.id
+  cluster         = var.cluster_id
   task_definition = aws_ecs_task_definition.task.arn
   desired_count   = var.desired_count
   tags            = var.tags

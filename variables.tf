@@ -145,8 +145,7 @@ variable "secrets" {
 
 }
 
-variable "use_default_cluster" {
-  type        = bool
-  description = "use distinct buckets for codebuild and codepipeline"
-  default     = false
+variable "cluster_id" {
+  type        = string
+  description = "ecr cluster id"
 }
