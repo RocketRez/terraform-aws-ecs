@@ -44,7 +44,11 @@ locals {
       "ssm:DescribeParameters",
       "ssm:GetParameters",
       "ssm:GetParameter",
-      "ssm:GetParameterHistory"
+      "ssm:GetParameterHistory",
+      "secretsmanager:DescribeSecret",
+      "secretsmanager:ListSecret",
+      "secretsmanager:GetSecretValue",
+      "secretsmanager:BatchGetSecretValue"
     ]
     resources = [for secret in var.secrets : secret.valueFrom]
     effect    = "Allow"
